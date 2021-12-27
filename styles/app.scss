@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&family=Montserrat&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a[href] {
+    color: #000;
+}
+
+
+.container {
+    width       : 95%;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+.navbar {
+    margin-top: 20px;
+
+    .container {
+        display    : flex;
+        align-items: center;
+    }
+
+    .logo {
+        font-size      : 28px;
+        text-transform : uppercase;
+        letter-spacing : 3px;
+        font-weight    : 600;
+        text-decoration: none;
+    }
+
+    .nav-link {
+        padding-right: 30px;
+        margin-left  : auto;
+        display      : flex;
+        list-style   : none;
+
+        a[href] {
+            position       : relative;
+            margin         : 0 15px;
+            display        : inline-block;
+            text-decoration: none;
+
+            &.active {
+                font-weight: 700;
+
+                &::after {
+                    content         : '';
+                    position        : absolute;
+                    bottom          : -10px;
+                    left            : 0;
+                    width           : 85%;
+                    height          : 2px;
+                    background-color: #000;
+                }
+            }
+
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+    }
+
+}
+
+.hero {
+    padding: 50px 0;
+
+    .container {
+        display    : flex;
+        align-items: center;
+    }
+
+    .text-wrapper {
+        width: 50%;
+
+        &.w-full {
+            width: 100%;
+        }
+
+        .title {
+            font-size    : 48px;
+            margin-top   : 0;
+            margin-bottom: 10px;
+
+            &.h-title {
+                margin-top: 40px;
+            }
+        }
+
+        .description {
+            font-size  : 22px;
+            line-height: 40px;
+        }
+
+        .cta {
+            margin-top      : 10px;
+            display         : inline-block;
+            padding         : 10px 30px;
+            background-color: #000;
+            color           : #eaeaea;
+            text-decoration : none;
+            border-radius   : 5px;
+            transition      : transform .25s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .image-wrapper {
+        // text-align: right;
+        width      : 50%;
+        margin-left: 20px;
+    }
+
+}
+
+.portfolio-wrapper {
+    display: flex;
+
+    .portfolio-item {
+        width     : 50%;
+        text-align: center;
+
+        .portfolio-image {
+            max-width: 100%;
+        }
+
+        .portfolio-name {
+            font-size     : 24px;
+            margin        : 10px 0;
+            text-transform: capitalize;
+        }
+
+        .portfolio-category {
+            color: #999;
+        }
+    }
+}
+
+.technologies-container {
+    padding-top    : 70px;
+    display        : flex;
+    justify-content: space-around;
+    align-items    : center;
+
+    .technologies-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width    : 38%;
+        max-width: 700px;
+        margin   : 50px 10px;
+        justify-content: space-around;
+    }
+}
